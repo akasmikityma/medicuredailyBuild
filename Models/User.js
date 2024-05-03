@@ -6,9 +6,14 @@ const userSChema=new mongoose.Schema({
         required:true
     },
     age:{
-        type:String,
+        type:Number,
         required:true
     },
+    slots:[
+        {type:mongoose.Schema.Types.ObjectId,
+        ref:'slot'}
+    ]
 })
 
 export const userModel=new mongoose.model('user',userSChema);
+

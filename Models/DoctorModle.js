@@ -9,6 +9,10 @@ const doctorschema=new mongoose.Schema({
         type:Number,
         required:true
     },
+    nh_id:{
+        type:mongoose.Schema.Types.ObjectId,
+        ref:'nurshome'
+    },
     spec:{
         type:[],
         required:true
